@@ -23,11 +23,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Detail"
         android:id="@+id/textView3"
-        android:layout_marginTop="85dp"
         android:textSize="40dp"
-        android:layout_below="@+id/editName"
-        android:layout_toLeftOf="@+id/view"
-        android:layout_toStartOf="@+id/view" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="200dp"
@@ -51,29 +49,61 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="90dp"
         android:layout_height="40dp"
         android:text="Add Data"
         android:id="@+id/adddata"
         android:onClick="addStudent"
         android:textStyle="italic"
         android:background="#AED6F1"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="42dp"
         android:layout_below="@+id/editMarks"
-        android:layout_toLeftOf="@+id/textView3"
-        android:layout_toStartOf="@+id/textView3" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="90dp"
         android:layout_height="40dp"
         android:text="View Data"
         android:id="@+id/view"
         android:background="#AED6F1"
         android:onClick="viewData"
         android:textStyle="italic"
+        android:layout_alignTop="@+id/button8"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ID"
+        android:id="@+id/textView2"
+        android:textSize="30dp"
+        android:layout_below="@+id/button8"
+        android:layout_alignLeft="@+id/button8"
+        android:layout_alignStart="@+id/button8" />
+    <EditText
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextid"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Delete"
+        android:id="@+id/button8"
+        android:background="#AED6F1"
+        android:onClick="Delete"
+        android:textStyle="italic"
         android:layout_alignTop="@+id/adddata"
-        android:layout_alignRight="@+id/editMarks"
-        android:layout_alignEnd="@+id/editMarks" />
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

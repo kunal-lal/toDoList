@@ -42,18 +42,7 @@ public class SqlDatabaseAdapter {
         return res;
     }
 
-    public boolean updateData(String id,String name,String marks){
-        SQLiteDatabase sqLiteDatabase=sqlhelper.getWritableDatabase();
-        ContentValues contentValues=new ContentValues();
-        contentValues.put(Sqlhelper.UID,id);
-        contentValues.put(Sqlhelper.NAME,name);
-        contentValues.put(Sqlhelper.MARKS,marks);
-        int row_affected= sqLiteDatabase.update(Sqlhelper.TABLE_NAME,contentValues,Sqlhelper.UID+" =?",new String[] {id });
-        if(row_affected>0)
-            return true;
-        else
-            return false;
-    }
+
 
     public boolean deleteData(String id){
         SQLiteDatabase sqLiteDatabase=sqlhelper.getWritableDatabase();

@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 public class SqlActivity extends AppCompatActivity {
     SqlDatabaseAdapter sqlhelper;
-    EditText edittitle,editdetails;
+    EditText edittitle,editdetails,editid2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,7 @@ public class SqlActivity extends AppCompatActivity {
         sqlhelper=new SqlDatabaseAdapter(this);
         edittitle=(EditText)findViewById(R.id.editName);
         editdetails=(EditText)findViewById(R.id.editMarks);
+        editid2=(EditText)findViewById(R.id.editTextid);
 
     }
 
@@ -73,6 +75,14 @@ public class SqlActivity extends AppCompatActivity {
         Intent intent=new Intent(SqlActivity.this,MainActivity.class);
         startActivity(intent);
         super.onBackPressed();
+    }
+    public void Delete(View view){
+        boolean isdeleted=sqlhelper.deleteData(editid2.getText().toString());
+        if(isdeleted==true)
+            Toast.makeText(this,"Data is deleted",Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(this,"Data is not deleted",Toast.LENGTH_SHORT).show();
+        editid2.setText("");
     }
 }
 
