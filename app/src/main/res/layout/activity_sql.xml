@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFF8EB"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Title"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="38dp"
+        android:textSize="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Detail"
+        android:id="@+id/textView3"
+        android:layout_marginTop="85dp"
+        android:textSize="40dp"
+        android:layout_below="@+id/editName"
+        android:layout_toLeftOf="@+id/view"
+        android:layout_toStartOf="@+id/view" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editName"
+        android:inputType="text"
+        android:textCursorDrawable="@null"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editMarks"
+        android:inputType="text"
+        android:textCursorDrawable="@null"
+        android:textColorHighlight="#000000"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Add Data"
+        android:id="@+id/adddata"
+        android:onClick="addStudent"
+        android:textStyle="italic"
+        android:background="#AED6F1"
+        android:layout_marginTop="88dp"
+        android:layout_below="@+id/editMarks"
+        android:layout_toLeftOf="@+id/textView3"
+        android:layout_toStartOf="@+id/textView3" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="View Data"
+        android:id="@+id/view"
+        android:background="#AED6F1"
+        android:onClick="viewData"
+        android:textStyle="italic"
+        android:layout_alignTop="@+id/adddata"
+        android:layout_alignRight="@+id/editMarks"
+        android:layout_alignEnd="@+id/editMarks" />
+
+
+</RelativeLayout>
